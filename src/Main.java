@@ -18,9 +18,32 @@ public class Main {
 		char [] cChar = new char[256];
 		String [] cNonImpr = {"NUL","SOH","STX","ETX","EOT","ENQ","ACK","BEL","BS","HT","LF","VT","FF","CR","SO","SI","DLE"
 		                      ,"DC1","DC2","DC3","DC4","NAK","SYN","ETB","CAN","EM","SUB","ESC","FS","GS","RS","US","SP"};
+		// Type booléen
+		boolean bBool;
+		
 		// Type chaine
 		String sChaine;
 		
+		// Type litteral
+		Float fLitterale;
+		Double dLitterale;
+		
+		// Type de différente base
+		int oValue;
+		int hValue;
+		
+		// Les valeurs par défaut
+		
+		byte bDefaut = 0;
+		short sDefaut = 0;
+		int iDefaut = 0;
+		long lDefaut = 0;
+		float fDefaut = 0;
+		double dDefaut = 0;
+		char cDefaut = 0;
+		boolean boDefaut = false;
+		String stDefaut = null;
+				
 		bEntier = 10;
 		sEntier = 15;
 		iEntier =-15;
@@ -29,7 +52,15 @@ public class Main {
 		fDecimal = 10.56f;
 		dDecimal = 345.6892;
 		
+		bBool = false;
+		
 		sChaine = "Hello world!";
+		
+		fLitterale = 3.14f;
+		dLitterale = 156.1235;
+		
+		oValue = 0363;
+		hValue = 0xF3;
 		
 		System.out.println("Les types de varibales Java :\n");
 		System.out.println("Les types entiers : \n");
@@ -66,7 +97,27 @@ public class Main {
 			}
 		}
 		
+		System.out.println();
+		System.out.println();
+		System.out.println("Le type booléen : " + bBool + " et l'inverse " + !bBool);
 		System.out.println("\n\nLe type String : " + sChaine + "\n");
+		System.out.println("Les valeurs littérales :");
+		System.out.println("Le type " + fLitterale.getClass().getTypeName() + " : " + fLitterale);
+		System.out.println("Le type " + dLitterale.getClass().getTypeName() + " : " + dLitterale);
+		System.out.println();
+		System.out.println("Valeur en octal " + Integer.toOctalString(oValue) + " et en entier " + oValue);
+		System.out.println("Valeur en hexadecimal " + Integer.toHexString(hValue) + " et en entier " + hValue);
+		System.out.println();
+		System.out.println("La valeur par défaut des types :");
+		System.out.println("Type byte " + bDefaut) ;
+		System.out.println("Type short " + sDefaut);
+		System.out.println("Type integer " + iDefaut);
+		System.out.println("Type long " + lDefaut);
+		System.out.println("Type float " + fDefaut);
+		System.out.println("Type double " + dDefaut);
+		System.out.println("Type char " + (int) cDefaut);
+		System.out.println("Type boolean " + boDefaut);
+		System.out.println("Type string " + stDefaut);
 		
 	}
 
